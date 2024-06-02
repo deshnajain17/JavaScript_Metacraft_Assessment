@@ -1,0 +1,31 @@
+const myNFTs_collection = []
+
+function mintNFT(_country, _gdp, _rank) {
+    const NFT = {
+        "coutryname": _country,
+        "currentgdp": _gdp,
+        "rank": _rank
+    }
+    myNFTs_collection.push(NFT);
+
+}
+function listNFTs() {
+    console.log("Hiii, This is Deshna\nMy Minted NFTs lists are: ");
+    for (let i = 0; i < myNFTs_collection.length; i++) {
+        console.log("\nCountry Name: " + myNFTs_collection[i].coutryname);
+        console.log("GDP: " + myNFTs_collection[i].currentgdp);
+        console.log("Rank : " + myNFTs_collection[i].rank);
+    }
+
+}
+function getTotalSupply() {
+    console.log("\nMinted NFTs total length: " + myNFTs_collection.length);
+}
+
+mintNFT("USA", "2.7%", "1");
+mintNFT("China", "4.6%", "2");
+mintNFT("Germany", "0.2%", "3");
+mintNFT("Japan", "0.9%", "4");
+mintNFT("India", "6.8%", "5");
+listNFTs();
+getTotalSupply();
